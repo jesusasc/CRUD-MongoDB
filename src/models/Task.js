@@ -13,6 +13,17 @@ const taskSchema = new Schema(
             type: String,
             required: true,
         },
+
+        precio:{
+            type: Number,
+            required:true,
+        },
+
+        cantidad:{
+            type: Number,
+            required: true
+        },
+
         done:{
             type: Boolean,
             default: false

@@ -10,6 +10,7 @@
       />
       <div class="card-body">
         <form action="/tasks/{{task._id}}/edit" method="POST">
+        <label>Product</label>
           <input
             type="text"
             class="form-control" aria-label="Text input with dropdown button"
@@ -18,12 +19,19 @@
             value="{{task.title}}"
           />
             <br>
+            <label for="">Description</label>
           <textarea
             class="form-control" aria-label="Text input with dropdown button"
             name="description"
             placeholder="Add a Write the Description"
             rows="3"
           >{{task.description}}</textarea>
+
+          <label for="">Price</label>
+          <input type="number" name="precio" value="{{task.precio}}" class="form-control" aria-label="Text input with dropdown button">
+          <br>
+          <label for="">Amount</label>
+          <input type="number" name="cantidad" value="{{task.cantidad}}" class="form-control" aria-label="Text input with dropdown button">
             <br>
           <button class="btn btn-outline-success">Update</button>
         </form>
