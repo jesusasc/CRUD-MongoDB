@@ -1,0 +1,46 @@
+<!--SE agrega la lista de la base de datos-->
+{{#if tasks}}
+  <table class="table table-bordered border-light">
+    <thead class="table-dark">
+      <tr>
+        <th>Num.</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Operations</th>
+      </tr>
+    </thead>
+    <br />
+    <tbody>
+      {{#each tasks}}
+        <tr class="text-light">
+          <td class="bg-dark text-light text-center">{{@index}}</td>
+          <td>{{title}}</td>
+          <td>{{description}}</td>
+          <td>
+            {{#if done}}
+              <a
+                href="/tasks/{{_id}}/toggleDone"
+                class="btn btn-warning"
+              >Undone</a>
+            {{else}}
+              <a href="/tasks/{{_id}}/toggleDone" class="btn btn-info">Done</a>
+            {{/if}}
+            <a href="/tasks/{{_id}}/delete" class="btn btn-danger">Delete</a>
+            <a href="/tasks/{{_id}}/edit" class="btn btn-secondary">Update</a>
+          </td>
+        </tr>
+
+      {{/each}}
+    </tbody>
+  </table>
+
+    {{else}}
+    <div class="h-100 d-flex aligin-items-center justify-content-center">
+        <div class="text-center text-danger">
+        <h2>Not Product</h2>
+        <img src="/img/doc1.png" class="w-15" alt="" />
+    </div>
+    </div>
+    
+
+{{/if}}

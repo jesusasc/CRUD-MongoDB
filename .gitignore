@@ -1,0 +1,9 @@
+#este gitignore sirve para no subir al iniciar el git init y subir paginas, archivos o carpetas que no queremos que se suaban en el repositorio o que tienen infromacion como seguirdad no queremos que se suban 
+
+#*TODO: como ejemplo no queremos que se suban el archivo .env ya quetiene  informacion importante como la ruta de la base de datos y el numero de puerto que se habre la aplicacion web
+#*TODO: tampoco subiremos la carpeta de node_modules ya que eso se creo por que lo instalamos y asi se pudo crear y no le va a servir el que lo quiera descargar o clonar 
+
+
+.env
+
+node_modules

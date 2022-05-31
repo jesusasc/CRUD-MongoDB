@@ -1,0 +1,33 @@
+<br>
+<div class="container">
+  <div class="row">
+    <div class="card text-center border border-warning" style="width: 18rem; margin: auto auto;">
+      <h3 class="card-title text-center">Update product</h3>
+      <img
+        src="https://1.bp.blogspot.com/-XdN0Kf19nJ8/WIpVQvbedZI/AAAAAAAAEcI/aZhbIUyKXcoQoRvDgmi3FM5_PQLDk-p4wCLcB/s1600/La%2Bmarca%2Bdel%2Bproducto%2BDefinici%25C3%25B3n%252C%2Bclasificaci%25C3%25B3n%252C%2Bc%25C3%25B3mo%2Bnacen%2By%2Bm%25C3%25A1s.jpg"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <form action="/tasks/{{task._id}}/edit" method="POST">
+          <input
+            type="text"
+            class="form-control" aria-label="Text input with dropdown button"
+            name="title"
+            placeholder="title"
+            value="{{task.title}}"
+          />
+            <br>
+          <textarea
+            class="form-control" aria-label="Text input with dropdown button"
+            name="description"
+            placeholder="Add a Write the Description"
+            rows="3"
+          >{{task.description}}</textarea>
+            <br>
+          <button class="btn btn-outline-success">Update</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

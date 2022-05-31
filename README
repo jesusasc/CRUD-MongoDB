@@ -1,0 +1,6 @@
+
+### descripcion para que funcione la aplicacion tiene que agregar estas variables de entorno
+
+MONGODB_URI= "la url de la base de datos de mongodb"
+
+PORT = "el numero de puerto para abrir en el navegador"
